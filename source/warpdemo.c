@@ -72,8 +72,8 @@ void InitSceneWarp()
 	TPL_OpenTPLFromMemory(&sceneTPL, (void *)scene_tpl, scene_tpl_size);
 	TPL_GetTexture(&sceneTPL, scene, &sceneTexObj);
 	GX_InitTexObjLOD(&sceneTexObj, GX_LINEAR, GX_LINEAR, 0, 0, 0, GX_FALSE, GX_FALSE, GX_ANISO_1);
-	tex_width = 256;
-	tex_height = 128;
+	tex_width = 64;
+	tex_height = 32;
 	warp_map = memalign(32, tex_width*tex_height*2*sizeof(char));
 	GX_InitTexObj(&warp_tex_obj, warp_map, tex_width, tex_height, GX_TF_IA8, GX_CLAMP, GX_CLAMP, GX_FALSE);
 	GX_InitTexObjLOD(&warp_tex_obj, GX_LINEAR, GX_LINEAR, 0, 0, 0, GX_FALSE, GX_FALSE, GX_ANISO_1);
